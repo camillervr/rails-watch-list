@@ -6,13 +6,15 @@
   </div>
 </div>
 
+<div class="container p-3">
 
-<h1>All my lists</h1>
+  <h1>My lists</h1>
 
-<div class="cards">
-  <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>');">
-      <%= link_to list.name, list_path(list), class: "link" %>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>');">
+        <%= link_to list.name, list_path(list), class: "link" %>
+      </div>
+    <% end %>
+  </div>
 </div>
